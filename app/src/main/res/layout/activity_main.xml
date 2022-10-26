@@ -8,37 +8,49 @@
     tools:context=".MainActivity">
     <TextView
         android:id="@+id/txtUTP"
-        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Universidad Tecnologica de Panama"
+        android:textAlignment="center"
         />
     <TextView
         android:id="@+id/txtFISC"
-        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Facultad de Sistemas"
-        android:layout_below="@id/txtUTP" />
+        android:layout_below="@id/txtUTP"
+        android:textAlignment="center"
+        />
 
     <TextView
         android:id="@+id/txtNSM"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:text="Nuevo Sistema de Matricula"
-        android:layout_below="@id/txtFISC" />
+        android:layout_below="@id/txtFISC"
+        android:textAlignment="center"/>
+
     <ImageView
         android:id="@+id/imvLogoUTP"
-        android:layout_width="272dp"
-        android:layout_height="242dp"
-        app:srcCompat="@drawable/logo_utp"
+        android:layout_width="204dp"
+        android:layout_height="230dp"
         android:layout_below="@id/txtNSM"
-        android:layout_toLeftOf="@id/imvLogoFISC"/>
+        android:layout_marginTop="-2dp"
+        app:srcCompat="@drawable/logo_utp" />
+
     <ImageView
         android:id="@+id/imvLogoFISC"
         android:layout_width="272dp"
-        android:layout_height="242dp"
+        android:layout_height="230dp"
         app:srcCompat="@drawable/logo_fisc"
         android:layout_below="@id/txtNSM"
-        android:layout_toRightOf="@id/txtUTP"/>
+        android:layout_toRightOf="@id/imvLogoUTP" />
 
     <EditText
         android:id="@+id/etcedula"
@@ -81,5 +93,6 @@
         android:text="Ingresar"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_below="@id/etcontraseña" />
   </RelativeLayout>
