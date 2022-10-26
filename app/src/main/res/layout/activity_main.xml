@@ -36,9 +36,9 @@
         android:id="@+id/imvLogoFISC"
         android:layout_width="272dp"
         android:layout_height="242dp"
-        app:srcCompat="@drawable/logo_utp"
+        app:srcCompat="@drawable/logo_fisc"
         android:layout_below="@id/txtNSM"
-        android:layout_toLeftOf="@id/imvLogoUTP"/>
+        android:layout_toRightOf="@id/txtUTP"/>
 
     <EditText
         android:id="@+id/etcedula"
@@ -48,10 +48,38 @@
         android:layout_marginTop="33dp"
         android:layout_marginEnd="76dp"
         android:ems="10"
-        android:hint="99-9999-999999"
+        android:hint="Cedula"
         android:inputType="textPersonName"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:textSize="22sp"
         android:textStyle="italic"
+        android:layout_below="@id/imvLogoFISC"
         />
+    <EditText
+        android:id="@+id/etcontraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="76dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPersonName"
+        android:textAlignment="gravity"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        android:layout_below="@id/etcedula"
+        />
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="215dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="98dp"
+        android:fontFamily="serif"
+        android:text="Ingresar"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_below="@id/etcontraseña" />
   </RelativeLayout>
