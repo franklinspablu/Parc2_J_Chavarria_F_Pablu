@@ -57,11 +57,12 @@
         android:layout_below="@id/txtNSM"
         android:layout_toRightOf="@id/imvLogoUTP" />
 
+
     <EditText
-        android:id="@+id/etcedula"
+        android:id="@+id/txtcedula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="76dp"
         android:ems="10"
@@ -72,8 +73,18 @@
         android:textStyle="italic"
         android:layout_below="@id/imvLogoFISC"
         />
+    <ImageView
+        android:id="@+id/logouser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/imvLogoUTP"
+        android:layout_toLeftOf="@+id/txtcedula"
+        android:src="@drawable/user"
+        />
     <EditText
-        android:id="@+id/etcontraseña"
+        android:id="@+id/txtcontraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
@@ -85,7 +96,16 @@
         android:textAlignment="gravity"
         android:textSize="22sp"
         android:textStyle="italic"
-        android:layout_below="@id/etcedula"
+        android:layout_below="@id/txtcedula"
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/logouser"
+        android:layout_toLeftOf="@+id/txtcedula"
+        android:src="@drawable/key"
+        android:layout_marginRight="10dp"
         />
     <Button
         android:id="@+id/btnIngresar"
@@ -99,5 +119,5 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_below="@id/etcontraseña" />
+        android:layout_below="@id/txtcontraseña" />
   </RelativeLayout>
