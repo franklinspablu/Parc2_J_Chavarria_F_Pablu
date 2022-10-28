@@ -38,16 +38,21 @@
 
     <ImageView
         android:id="@+id/imvLogoUTP"
-        android:layout_width="204dp"
-        android:layout_height="230dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_below="@id/txtNSM"
-        android:layout_marginTop="-2dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
         app:srcCompat="@drawable/logo_utp" />
 
     <ImageView
         android:id="@+id/imvLogoFISC"
-        android:layout_width="272dp"
-        android:layout_height="230dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="10dp"
         app:srcCompat="@drawable/logo_fisc"
         android:layout_below="@id/txtNSM"
         android:layout_toRightOf="@id/imvLogoUTP" />
