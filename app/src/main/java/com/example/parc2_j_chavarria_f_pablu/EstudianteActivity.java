@@ -4,16 +4,17 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GradesActivity extends AppCompatActivity {
+public class EstudianteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grades);
+        setContentView(R.layout.activity_estudiantes);
         InicializarControles();
 
     }
 
     private void InicializarControles() {
+
     }
 }

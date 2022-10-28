@@ -33,7 +33,7 @@
         <activity android:name=".ProfesorActivity"
             android:exported="true">
         </activity>
-        <activity android:name=".GradesActivity"
+        <activity android:name=".EstudianteActivity"
             android:exported="true">
 
         </activity>

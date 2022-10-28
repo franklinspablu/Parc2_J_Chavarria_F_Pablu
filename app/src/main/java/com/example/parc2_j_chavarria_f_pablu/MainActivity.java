@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public void VerifyUser(){
         String[] users;
         try {
-         users =  file.FileReader(getApplicationContext(), "credenciales"); //le pasamos context y el nombre de las credenciales
+         users =  file.FileReader(getApplicationContext(), "credenciales1"); //le pasamos context y el nombre de las credenciales
             //crendenciales son mis credenciales, crendeciales 1 son las tuyas.
             //verificacion de lo que se extrajo del EditText con los que tenemos en el archivo.
          if (txtCedula.getText().toString().equals(users[1]) && txtContrasena.getText().toString().equals(users[2])){

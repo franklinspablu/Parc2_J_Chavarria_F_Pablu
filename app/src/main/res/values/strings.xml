@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Parc2_J_Chavarria_F_Pablu</string>
+
+
+    <string-array name="Notas">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>F</item>
+    </string-array>
+
+    <string-array name="Materias">
+        <item>Circuitos Logicos</item>
+        <item>Electronica Basica</item>
+
+        <item>Sistemas basados en conocimiento</item>
+        <item>Animación Digital y Videojuegos</item>
+        <item>Ingenieria de Sistemas Dinamicos</item>
+        <item>Estructuras de datos 2</item>
+
+        <item>Ingeniería de Software 1</item>
+        <item>Ingeniería de Software 2</item>
+
+        <item>Sistemas Operativos</item>
+        <item>Organizacion y Arquitectura de computadoras</item>
+
+    </string-array>
+
 </resources>

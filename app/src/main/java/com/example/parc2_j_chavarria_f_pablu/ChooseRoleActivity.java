@@ -3,9 +3,7 @@ package com.example.parc2_j_chavarria_f_pablu;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.telephony.RadioAccessSpecifier;
 import android.view.View;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -71,7 +69,7 @@ public class ChooseRoleActivity extends AppCompatActivity {
 
     public void EstudianteScreen(){
         try {
-            Intent i = new Intent(getApplicationContext(),GradesActivity.class);
+            Intent i = new Intent(getApplicationContext(), EstudianteActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString("Nombre", name);
             i.putExtras(bundle);
