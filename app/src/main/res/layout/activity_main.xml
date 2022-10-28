@@ -119,5 +119,6 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_below="@id/txtcontraseña" />
+        android:layout_below="@id/txtcontraseña"
+        android:onClick="IngresarOnClick"/>
   </RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="casual">
+
+        <TextView
+            android:id="@+id/txtUTP"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Universidad Tecnologica de Panama"
+            android:textAlignment="center"
+            android:fontFamily="casual"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/txtFISC"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facultad de Sistemas"
+            android:layout_below="@id/txtUTP"
+            android:textAlignment="center"
+            android:fontFamily="casual"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtNSM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Nuevo Sistema de Matricula"
+            android:layout_below="@id/txtFISC"
+            android:textAlignment="center"
+            android:fontFamily="casual"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:id="@+id/imvLogoUTP"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/txtNSM"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/logo_utp" />
+
+        <ImageView
+            android:id="@+id/imvLogoFISC"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/logo_fisc"
+            android:layout_below="@id/txtNSM"
+            android:layout_toRightOf="@id/imvLogoUTP" />
+
+        <TextView
+            android:id="@+id/lblSeleccionePerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imvLogoFISC"
+            android:text="Seleccione su perfil"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="casual"
+            android:textColor="@color/black"
+        />
+
+        <RadioGroup
+            android:id="@+id/rgOpciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblSeleccionePerfil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+
+            >
+
+            <RadioButton
+                android:id="@+id/rbEstudiante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sitio de Estudiante"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+            />
+            <RadioButton
+                android:id="@+id/rbSIU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sitio de Estudiante SIU"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+
+                />
+            <RadioButton
+                android:id="@+id/rbProfesor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sitio de Profesor"
+                android:textSize="20dp"
+                android:fontFamily="casual"
+                />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="215dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="98dp"
+
+            android:text="Entrar"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/rgOpciones"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
