@@ -69,7 +69,6 @@ public class ChooseRoleActivity extends AppCompatActivity {
         }
     }
 
-
     public void EstudianteScreen(){
         try {
             Intent i = new Intent(getApplicationContext(),GradesActivity.class);
