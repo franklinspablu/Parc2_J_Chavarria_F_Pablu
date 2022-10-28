@@ -123,12 +123,12 @@
             android:layout_marginStart="98dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="98dp"
-
             android:text="Entrar"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_below="@id/rgOpciones"
+            android:onClick="Entrar"
             />
 
     </RelativeLayout>

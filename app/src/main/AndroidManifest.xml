@@ -30,6 +30,13 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".ProfesorActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".GradesActivity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

@@ -73,7 +73,14 @@ public class MainActivity extends AppCompatActivity {
             //verificacion de lo que se extrajo del EditText con los que tenemos en el archivo.
          if (txtCedula.getText().toString().equals(users[1]) && txtContrasena.getText().toString().equals(users[2])){
              Toast.makeText(this, "Sesion Aprovada", Toast.LENGTH_LONG).show();
-             startActivity(new Intent(getApplicationContext(), ChooseRoleActivity.class));
+
+             Bundle bundle = new Bundle();
+             bundle.putString("Nombre", users[0]);
+             bundle.putString("Rol", users[3]);
+             Intent i = new Intent(getApplicationContext(), ChooseRoleActivity.class);
+             i.putExtras(bundle);
+             startActivity(i);
+
          }else{
              Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
          }
