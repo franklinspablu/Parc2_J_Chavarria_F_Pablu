@@ -14,34 +14,40 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ChooseRoleActivity extends AppCompatActivity {
 
     RadioGroup rgOpciones;
-    Intent i = getIntent();
-    Bundle bundle = getIntent().getExtras();
+    //Intent i = getIntent();
+
     String name, rol;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_role);
-        InicializarControles();
-        getData();
+        Bundle bundle = getIntent().getExtras();
 
+        InicializarControles();
+        getData(bundle);
     }
 
-    public void getData(){
+    public void getData(Bundle bundle){
+        try {
+            if (bundle!=null){
+                Toast.makeText(this, "Data encontrada", Toast.LENGTH_SHORT).show();
+                name = bundle.getString("Nombre");
+                rol = bundle.getString("Rol");
 
-        if (!bundle.isEmpty()){
-
-            name = bundle.getString("Nombre");
-            rol = bundle.getString("Rol");
-
-        }else{
-            Toast.makeText(this, "Datos no encontrados", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "Datos no encontrados", Toast.LENGTH_SHORT).show();
+            }
+        }catch (Exception e){
+            Toast.makeText(this, "ERROR"+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
     }
 
     public void InicializarControles(){
         rgOpciones = (RadioGroup)findViewById(R.id.rgOpciones);
     }
-
 
 
     public void Entrar(View v){
@@ -98,7 +104,6 @@ public class ChooseRoleActivity extends AppCompatActivity {
     }
 
     public void SiuScreen(){
-
         try {
             Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://utp.ac.pa"));
             startActivity(i);
@@ -107,7 +112,5 @@ public class ChooseRoleActivity extends AppCompatActivity {
         }
 
     }
-
-
 
 }

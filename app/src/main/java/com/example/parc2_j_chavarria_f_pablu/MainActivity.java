@@ -67,28 +67,27 @@ public class MainActivity extends AppCompatActivity {
     public void VerifyUser(){
         String[] users;
         try {
-         users =  file.FileReader(getApplicationContext(), "credenciales1"); //le pasamos context y el nombre de las credenciales
+         users =  file.FileReader(getApplicationContext(), "credenciales"); //le pasamos context y el nombre de las credenciales
             //crendenciales son mis credenciales, crendeciales 1 son las tuyas.
-
             //verificacion de lo que se extrajo del EditText con los que tenemos en el archivo.
          if (txtCedula.getText().toString().equals(users[1]) && txtContrasena.getText().toString().equals(users[2])){
              Toast.makeText(this, "Sesion Aprovada", Toast.LENGTH_LONG).show();
-
-             Bundle bundle = new Bundle();
-             bundle.putString("Nombre", users[0]);
-             bundle.putString("Rol", users[3]);
-             Intent i = new Intent(getApplicationContext(), ChooseRoleActivity.class);
-             i.putExtras(bundle);
-             startActivity(i);
-
+             TransitionToChooseRole(users);
          }else{
              Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
          }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    public void TransitionToChooseRole(String[] users){
+        Bundle bundle = new Bundle();
+        bundle.putString("Nombre", users[0]);
+        bundle.putString("Rol", users[3]);
+        Intent i = new Intent(this, ChooseRoleActivity.class);
+        i.putExtras(bundle);
+        startActivity(i);
+    }
 
 }

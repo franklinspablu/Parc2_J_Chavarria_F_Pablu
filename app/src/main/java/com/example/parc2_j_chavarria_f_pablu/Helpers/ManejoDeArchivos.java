@@ -13,7 +13,7 @@ public class ManejoDeArchivos {
     /*
      creacion de instancias de usuarios, tu sbes eso mano*/
     Usuarios users = new Usuarios("Juan Chavarria", "8-952-301", "123", 1);
-    Usuarios users1 = new Usuarios("Franklin Pablu", "8-954-2298", "321", 2);
+    Usuarios users1 = new Usuarios("Franklin Pablu", "8", "3", 2);
 
     public void WriteInFile(Context context){
         //creamos instancias de la clase OSW
