@@ -13,16 +13,21 @@
         android:layout_marginLeft="10dp"
         android:textSize="25dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="casual"
         />
 
     <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
         android:src="@drawable/setting"
-        tools:ignore="SpeakableTextPresentCheck" />
+
+        />
 
     <TextView
         android:id="@+id/lblTitulo"
@@ -34,7 +39,7 @@
         android:layout_below="@+id/lblNombre"
         android:layout_marginTop="70dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:fontFamily="casual"
         />
 
