@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.parc2_j_chavarria_f_pablu.Helpers.ManejoDeArchivos;
 import com.example.parc2_j_chavarria_f_pablu.Helpers.Notas;
 import com.example.parc2_j_chavarria_f_pablu.Helpers.NotasAdapter;
 
@@ -27,7 +28,8 @@ public class EstudianteActivity extends AppCompatActivity {
     TextView lblNombre;
     ListView lvNotasEstudiantes;
     List<Notas> notasOpciones = new ArrayList<>();
-    String name, rol;
+    String name, rol, pwd;
+    ManejoDeArchivos file = new ManejoDeArchivos();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class EstudianteActivity extends AppCompatActivity {
                 //Toast.makeText(this, "Data encontrada", Toast.LENGTH_SHORT).show();
                 name = bundle.getString("Nombre");
                 rol = bundle.getString("Rol");
-
+                pwd = bundle.getString("Pwd");
             }else{
                 Toast.makeText(this, "Datos no encontrados", Toast.LENGTH_SHORT).show();
             }
@@ -97,6 +99,7 @@ public class EstudianteActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("Nombre", name);
         bundle.putString("Rol", rol);
+        bundle.putString("Pwd", pwd);
         Intent i = new Intent(getApplicationContext(), EditarUsuarioActivity.class);
         i.putExtras(bundle);
         startActivity(i);
@@ -127,7 +130,8 @@ public class EstudianteActivity extends AppCompatActivity {
 
 
             case R.id.menuCerrarSesion:
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+                Intent intent = new Intent(getApplicationContext(), IniciarSesion.class);
                 startActivity(intent);
                 break;
         }

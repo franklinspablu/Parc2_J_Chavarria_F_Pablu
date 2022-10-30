@@ -126,6 +126,7 @@ public class AddNotaActivity extends AppCompatActivity implements AdapterView.On
                 imvStatus = R.drawable.cancel;
                 break;
             case "N":
+            case "":
                 imvStatus = R.drawable.empty;
         }
 

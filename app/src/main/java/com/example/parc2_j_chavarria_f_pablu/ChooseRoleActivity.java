@@ -14,7 +14,7 @@ public class ChooseRoleActivity extends AppCompatActivity {
     RadioGroup rgOpciones;
     //Intent i = getIntent();
 
-    String name, rol;
+    String name, rol, pwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class ChooseRoleActivity extends AppCompatActivity {
                 //Toast.makeText(this, "Data encontrada", Toast.LENGTH_SHORT).show();
                 name = bundle.getString("Nombre");
                 rol = bundle.getString("Rol");
-
+                pwd = bundle.getString("Pwd");
             }else{
                 Toast.makeText(this, "Datos no encontrados", Toast.LENGTH_SHORT).show();
             }
@@ -74,6 +74,7 @@ public class ChooseRoleActivity extends AppCompatActivity {
             Bundle bundle = new Bundle();
             bundle.putString("Nombre", name);
             bundle.putString("Rol", rol);
+            bundle.putString("Pwd", pwd);
             i.putExtras(bundle);
             if (rol.equals("1")){
                 startActivity(i);
@@ -92,6 +93,7 @@ public class ChooseRoleActivity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("Nombre", name);
                 bundle.putString("Rol", rol);
+                bundle.putString("Pwd", pwd);
                 i.putExtras(bundle);
                 if (rol.equals("2")){
                     startActivity(i);

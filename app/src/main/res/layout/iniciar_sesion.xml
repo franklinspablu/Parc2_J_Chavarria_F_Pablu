@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/txtUTP"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Universidad Tecnologica de Panama"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/txtFISC"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facultad de Sistemas"
+        android:layout_below="@id/txtUTP"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/txtNSM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Nuevo Sistema de Matricula"
+        android:layout_below="@id/txtFISC"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/imvLogoUTP"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/txtNSM"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/logo_utp" />
+
+    <ImageView
+        android:id="@+id/imvLogoFISC"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/logo_fisc"
+        android:layout_below="@id/txtNSM"
+        android:layout_toRightOf="@id/imvLogoUTP" />
+
+
+    <EditText
+        android:id="@+id/txtcedula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="76dp"
+        android:ems="10"
+        android:hint="Cedula"
+        android:inputType="textPersonName"
+        android:textAlignment="gravity"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        android:layout_below="@id/imvLogoFISC"
+        />
+    <ImageView
+        android:id="@+id/logouser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/imvLogoUTP"
+        android:layout_toLeftOf="@+id/txtcedula"
+        android:src="@drawable/user"
+        />
+    <EditText
+        android:id="@+id/txtcontraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="76dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPersonName"
+        android:textAlignment="gravity"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        android:layout_below="@id/txtcedula"
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/logouser"
+        android:layout_toLeftOf="@+id/txtcedula"
+        android:src="@drawable/key"
+        android:layout_marginRight="10dp"
+        />
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="215dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="98dp"
+        android:fontFamily="serif"
+        android:text="Ingresar"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtcontraseña"
+        android:onClick="IngresarOnClick"/>
+</RelativeLayout>
