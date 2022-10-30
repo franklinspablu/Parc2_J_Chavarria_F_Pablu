@@ -1,7 +1,7 @@
 package com.example.parc2_j_chavarria_f_pablu.Helpers;
 
 public class Usuarios {
-// CARPINTERIA HERMANO!!!
+
     String nombre;
     String cedula;
     String contrasena;

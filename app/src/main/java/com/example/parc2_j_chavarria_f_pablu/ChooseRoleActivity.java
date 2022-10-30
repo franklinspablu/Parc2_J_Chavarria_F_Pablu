@@ -22,7 +22,6 @@ public class ChooseRoleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_role);
         Bundle bundle = getIntent().getExtras();
-
         InicializarControles();
         getData(bundle);
     }
@@ -30,7 +29,7 @@ public class ChooseRoleActivity extends AppCompatActivity {
     public void getData(Bundle bundle){
         try {
             if (bundle!=null){
-                Toast.makeText(this, "Data encontrada", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Data encontrada", Toast.LENGTH_SHORT).show();
                 name = bundle.getString("Nombre");
                 rol = bundle.getString("Rol");
 
@@ -67,11 +66,14 @@ public class ChooseRoleActivity extends AppCompatActivity {
         }
     }
 
+
+
     public void EstudianteScreen(){
         try {
             Intent i = new Intent(getApplicationContext(), EstudianteActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString("Nombre", name);
+            bundle.putString("Rol", rol);
             i.putExtras(bundle);
             if (rol.equals("1")){
                 startActivity(i);
@@ -89,6 +91,7 @@ public class ChooseRoleActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),ProfesorActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("Nombre", name);
+                bundle.putString("Rol", rol);
                 i.putExtras(bundle);
                 if (rol.equals("2")){
                     startActivity(i);

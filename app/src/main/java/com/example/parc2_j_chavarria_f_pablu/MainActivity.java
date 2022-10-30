@@ -65,15 +65,24 @@ public class MainActivity extends AppCompatActivity {
     como no está entonces le pasamos el contexto de la actividad*/
 
     public void VerifyUser(){
-        String[] users;
+        String[] credenciales = null, credenciales1 = null;
         try {
-         users =  file.FileReader(getApplicationContext(), "credenciales1"); //le pasamos context y el nombre de las credenciales
-            //crendenciales son mis credenciales, crendeciales 1 son las tuyas.
-            //verificacion de lo que se extrajo del EditText con los que tenemos en el archivo.
-         if (txtCedula.getText().toString().equals(users[1]) && txtContrasena.getText().toString().equals(users[2])){
-             Toast.makeText(this, "Sesion Aprovada", Toast.LENGTH_LONG).show();
-             TransitionToChooseRole(users);
-         }else{
+            BufferedReader bf = new BufferedReader(new InputStreamReader(openFileInput("Login.txt")));
+            credenciales = bf.readLine().split("~");
+            bf.close();
+
+            BufferedReader bf1 = new BufferedReader(new InputStreamReader(openFileInput("Login1.txt")));
+            credenciales1 = bf1.readLine().split("~");
+            bf1.close();
+
+         if (txtCedula.getText().toString().equals(credenciales[1]) && txtContrasena.getText().toString().equals(credenciales[2])){
+             Toast.makeText(this, "Sesion Aprobada", Toast.LENGTH_LONG).show();
+             TransitionToChooseRole(credenciales);
+
+         }else if (txtCedula.getText().toString().equals(credenciales1[1]) && txtContrasena.getText().toString().equals(credenciales1[2])){
+             Toast.makeText(this, "Sesion Aprobada", Toast.LENGTH_LONG).show();
+             TransitionToChooseRole(credenciales1);
+         } else {
              Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
          }
         } catch (Exception e) {

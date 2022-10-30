@@ -37,6 +37,14 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".AddNotaActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".EditarUsuarioActivity"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>
