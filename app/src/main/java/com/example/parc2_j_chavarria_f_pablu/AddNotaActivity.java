@@ -3,7 +3,6 @@ package com.example.parc2_j_chavarria_f_pablu;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Binder;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,24 +20,21 @@ public class AddNotaActivity extends AppCompatActivity implements AdapterView.On
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addnota);
 
-        Bundle b = getIntent().getExtras();
-
-        if (b!=null){
-
-            cedula = b.getString("cedula");
-
-        }else{
-            cedula = "";
-        }
-
+        getData();
         LoadSpinner();
 
     }
-
+    public String getData(){
+        Bundle b = getIntent().getExtras();
+        if (b!=null) {
+            return  cedula = b.getString("cedula");
+        }
+            return null;
+    }
     private void LoadSpinner() {
         //Spinner de Notas
         spnNotas = (Spinner)findViewById(R.id.spnNotas);
@@ -61,19 +57,18 @@ public class AddNotaActivity extends AppCompatActivity implements AdapterView.On
         int imvMateria = GetImagenMateria(materia);
         int imvStatus = GetImagenNota(nota);
 
-        SharedPreferences prefs =  getSharedPreferences("notas", Context.MODE_PRIVATE);
+        SharedPreferences prefs =  getSharedPreferences("notas", Context.MODE_PRIVATE);  //Crea el shared prefs
         SharedPreferences.Editor editor = prefs.edit();
-
-        int indice = (int)spnMaterias.getSelectedItem();
-
-        editor.putString("materia-"+indice,materia);
-        editor.putString("nota-"+indice,nota);
-        editor.putInt("imvMateria-"+indice,imvMateria);
-        editor.putInt("imvStatus-"+indice,imvStatus);
+        try {
+        int indx = (int) spnMaterias.getSelectedItemId();
+        editor.putString("materia-"+indx,materia);
+        editor.putString("nota-"+indx,nota);
+        editor.putInt("imvMateria-"+indx,imvMateria);
+        editor.putInt("imvStatus-"+indx,imvStatus);
 
         editor.commit();
 
-        try {
+            Toast.makeText(this, "se hizo commit de shared preferences", Toast.LENGTH_SHORT).show();
             Bundle b = new Bundle();
             b.putString("cedula", cedula);
 
@@ -81,12 +76,9 @@ public class AddNotaActivity extends AppCompatActivity implements AdapterView.On
             i.putExtras(b);
             startActivity(i);
         }catch (Exception e){
-            Toast.makeText(this, "Error en addNota a ProfesorAct"+e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error en addNota a ProfesorAct "+e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
         }
-
-
     }
-
 
 
     public int GetImagenMateria(String materia){
@@ -94,14 +86,13 @@ public class AddNotaActivity extends AppCompatActivity implements AdapterView.On
         int imvMateria =0;
 
         switch (materia){
-
             case "Circuitos Logicos":
             case "Electronica Basica":
                 imvMateria = R.drawable.electricalcircuit;
                 break;
-            case "Sistemas basados en conocimiento":
-            case "Animación Digital y Videojuegos" :
-            case "Ingenieria de Sistemas Dinamicos":
+            case "Sistemas bas. en conoc.":
+            case "Animación Digital y Vid." :
+            case "Ingenieria de Sist. Din.":
             case "Estructuras de datos 2":
                 imvMateria = R.drawable.computerscience;
                 break;
@@ -134,6 +125,9 @@ public class AddNotaActivity extends AppCompatActivity implements AdapterView.On
             case "F":
                 imvStatus = R.drawable.cancel;
                 break;
+            case "N":
+            case "":
+                imvStatus = R.drawable.empty;
         }
 
     return  imvStatus;

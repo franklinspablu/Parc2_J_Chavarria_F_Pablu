@@ -8,15 +8,17 @@
         <item>C</item>
         <item>D</item>
         <item>F</item>
+        <item>N</item>
+        <item></item>
     </string-array>
 
     <string-array name="Materias">
         <item>Circuitos Logicos</item>
         <item>Electronica Basica</item>
 
-        <item>Sistemas basados en conocimiento</item>
-        <item>Animación Digital y Videojuegos</item>
-        <item>Ingenieria de Sistemas Dinamicos</item>
+        <item>Sistemas bas. en conoc.</item>
+        <item>Animación Digital y Vid.</item>
+        <item>Ingenieria de Sist. Din.</item>
         <item>Estructuras de datos 2</item>
 
         <item>Ingeniería de Software 1</item>

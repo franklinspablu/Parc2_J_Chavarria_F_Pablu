@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modificar Información\n de Usuario"
+        android:textSize="35dp"
+        android:fontFamily="casual"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nuevo Nombre"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:fontFamily="casual"
+        />
+
+    <EditText
+        android:id="@+id/txtEditarNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Introduzca un nombre"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nueva Contraseña"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual"
+        />
+
+    <EditText
+        android:id="@+id/txtEditarcontra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Introduzca un nombre"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:onClick="UpdateUsuario"
+        android:text="Actualizar"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/txtEditarcontra"
+        android:layout_centerInParent="true"
+        />
+
+
+
+
+</LinearLayout>
